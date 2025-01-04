@@ -3,6 +3,9 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
 
+const adminRoutes = require('./routes/admin');
+app.use('/api/admin', adminRoutes);
+
 const authRoutes = require('./routes/auth');
 app.use('/api/auth', authRoutes);
 
